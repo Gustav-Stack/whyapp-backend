@@ -18,7 +18,7 @@ import { UserDTO } from './dto/user.dto';
 import { UserUpdateDTO } from './dto/userUpdate.dto';
 import { StatusCodes } from 'http-status-codes';
 import { userQueriesFriendsDTO } from './dto/userQueriesFriends.dto';
-import { MailingService } from 'src/mailing/mailer.service';
+import { MailingService } from 'src/mailing/mailing.service';
 import { BCrypt } from 'src/utils/bcrypt.service';
 import { BearHashingService } from 'src/utils/bearHashing/bear-hashing.service';
 const bcrypt = new BCrypt();

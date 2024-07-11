@@ -18,7 +18,7 @@ import { BCrypt } from 'src/utils/bcrypt.service';
 import { CustomLogger } from 'src/utils/customLogger/customLogger.service';
 import { Public } from 'src/decorators/is-public-endpoint.decorator';
 import { BearHashingService } from 'src/utils/bearHashing/bear-hashing.service';
-import { MailingService } from 'src/mailing/mailer.service';
+import { MailingService } from 'src/mailing/mailing.service';
 const bcrypt = new BCrypt();
 
 @ApiTags('Authentication')
