@@ -20,15 +20,20 @@ export class MailingService {
     if (!(env instanceof Error)) {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { PROFESSIONAL_EMAIL, PROFESSIONAL_NAME } = env;
-      await this.mailerService.emails.send({
-        from: `onboarding@resend.dev`,
-        to,
-        subject,
-        text,
-        html: html.default ? html.default : html.react,
-      });
+      try {
+        const email = await this.mailerService.emails.send({
+          from: `${PROFESSIONAL_NAME} <${PROFESSIONAL_EMAIL}>`,
+          to,
+          subject,
+          text,
+          html: html.default ? html.default : html.react,
+        });
+        console.log('Email enviado com sucesso: ', email);
+      } catch (error) {
+        console.log('Um erro grave ocorreu ao enviar o email \n', error);
+      }
     } else {
-      console.log(env.message, ' Impossível enviar e-mails.');
+      console.log(env.message, ' Erro ao encontrar variáveis de ambiente.');
     }
   }
 
@@ -112,7 +117,6 @@ export class MailingService {
         'Variável de ambiente PROFESSIONAL_NAME não foi encontrada.',
       );
     }
-
     return {
       PROFESSIONAL_EMAIL,
       PROFESSIONAL_NAME,
