@@ -19,7 +19,7 @@ import { AddMembersDto } from './dto/add-members.dto';
 @ApiTags('Group')
 @Controller('groups')
 export class GroupsController {
-  constructor(private readonly groupsService: GroupsService) { }
+  constructor(private readonly groupsService: GroupsService) {}
 
   @Post()
   async create(@Body() createGroupDto: CreateGroupDto, @Res() res: Response) {

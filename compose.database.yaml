@@ -1,0 +1,21 @@
+networks:
+  main:
+    driver: bridge
+
+services:
+  database:
+    image: bitnami/postgresql
+    container_name: whyapp_database
+    volumes:
+      - ./dbdata/postgresql:/bitnami/postgresql
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - POSTGRESQL_USERNAME=${DB_USER}
+      - POSTGRESQL_PASSWORD=${DB_PASSWORD}
+      - POSTGRESQL_DATABASE=${DB_NAME}
+    ports:
+      - "${DB_PORT}:5432"
+    networks:
+      - main

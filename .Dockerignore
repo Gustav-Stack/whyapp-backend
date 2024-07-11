@@ -2,5 +2,6 @@
 /node_modules
 /test
 /wsTests
+/dbData
 
 .env-exemple

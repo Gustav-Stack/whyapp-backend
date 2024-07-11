@@ -20,7 +20,7 @@ import { UserQueriesDTO } from 'src/users/dto/userQueries.dto';
 @ApiTags('Group Messages')
 @Controller('group-messages')
 export class GroupMessagesController {
-  constructor(private readonly groupMessagesService: GroupMessagesService) { }
+  constructor(private readonly groupMessagesService: GroupMessagesService) {}
 
   @Post()
   async create(

@@ -1,6 +1,7 @@
 #OTHERS
 /pgData
 /docker
+/dbData
 
 # compiled output
 /dist
