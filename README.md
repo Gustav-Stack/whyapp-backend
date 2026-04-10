@@ -2,6 +2,8 @@
 
 ### API do software [WhyApp](https://github.com/bear-system-dev/whyapp-frontend), desenvolvido pela [Bear System © | 2023](https://bearsystem.onrender.com)
 
+### Sobre o projeto
+WhyApp é um aplicativo de conversas em tempo real com suporte a chats privados, grupos e notificações. Esta API foi desenvolvida com NestJS e TypeScript, utilizando WebSockets para comunicação em tempo real, Prisma ORM com PostgreSQL e autenticação JWT.
 ## Depende
 
 - [NodeJs LTS (v20.11.0)](https://nodejs.org/en)
